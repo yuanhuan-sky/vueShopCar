@@ -1,0 +1,15 @@
+module.exports={
+    publicPath:'',
+    devServer:{
+        host:'localhost',
+        port:'8080',
+        proxy:{
+            '/vue':{
+                target:'http://loaclhost:8080',
+                ws:false,
+                //将主机头的原点改为目标的URL
+                changeOrigai:false
+            }
+        }
+    }
+}
